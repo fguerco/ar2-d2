@@ -7,6 +7,11 @@ client.on('ready', () => {
   console.log("Bot ready!")
 })
 
+client.on('disconnect', function(erMsg, code) {
+    console.log('----- Bot disconnected from Discord with code', code, 'for reason:', erMsg, '-----');
+    client.connect();
+});
+
 client.on('message', msg => handler.processMessage(msg))
 
 client.login('MzQwNTM1Nzk0MTUyMzc0Mjcz.DF0AvA.qArBU36WFZdBC60zI_4iDMlDmws').then(str => {
