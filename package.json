@@ -1,0 +1,16 @@
+{
+  "name": "ar2-d2",
+  "version": "0.0.1",
+  "dependencies": {
+    "discord.js": ">= 11.1.0",
+    "bufferutil": ">= 0.0.1",
+    "erlpack": ">= 0.0.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
