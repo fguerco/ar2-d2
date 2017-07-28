@@ -9,4 +9,6 @@ client.on('ready', () => {
 
 client.on('message', msg => handler.processMessage(msg))
 
-client.login('MzQwNTM1Nzk0MTUyMzc0Mjcz.DF0AvA.qArBU36WFZdBC60zI_4iDMlDmws');
+client.login('MzQwNTM1Nzk0MTUyMzc0Mjcz.DF0AvA.qArBU36WFZdBC60zI_4iDMlDmws').then(str => {
+  client.user.setGame("Free Play! Use a!slot [amount]")
+});

@@ -4,10 +4,14 @@ class SlotCommand {
     this.items = [
       {
         emoji: ':seven:',
-        factor: 10
+        factor: 15
       },
       {
         emoji: ':cherries:',
+        factor: 0.5
+      },
+      {
+        emoji: ':banana:',
         factor: 0.5
       },
       {
@@ -16,6 +20,10 @@ class SlotCommand {
       },
       {
         emoji: ':grapes:',
+        factor: 1
+      },
+      {
+        emoji: ':melon:',
         factor: 1
       },
       {
@@ -66,7 +74,7 @@ class SlotCommand {
     let multiplier = (multiples == 1 ? 0 : multiples)
 
     let items = this.items
-    return item >= 0 ? Math.pow(items[item].factor, multiplier) : 0
+    return item >= 0 ? items[item].factor * multiplier : 0
   }
 
   runSlot(msg, amount) {
