@@ -88,7 +88,7 @@ class SlotCommand {
 
     var response = this.roll()
     var slot = this
-    var user = msg.author.tag
+    var user = msg.author.username
     msg.channel.send(response.text).then(m => {
       setTimeout(function() {
         response = slot.roll()
