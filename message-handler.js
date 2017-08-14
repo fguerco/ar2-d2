@@ -5,7 +5,7 @@ class MessageHandler {
   processMessage(msg) {
     try {
       var m = msg.content.split(' ')
-      var cmd = commands[m[0]]
+      var cmd = commands[m[0].toLowerCase()]
       if (cmd) {
         cmd.execute(msg, m)
       }
