@@ -6,6 +6,9 @@ class DoDontCommand {
     }
     let newContents = contents.slice()
     newContents[0] = 'do'
+    if (newContents[1].toLowerCase() == 'do') {
+      newContents.shift()
+    }
     msg.channel.send(newContents.join(' '))
   }
 }
