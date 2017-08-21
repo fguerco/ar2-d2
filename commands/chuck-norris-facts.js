@@ -7,7 +7,7 @@ class ChuckNorrisFactsCommand {
       rp('https://api.icndb.com/jokes/random')
         .then((body) => {
           let data = JSON.parse(body)
-          m.edit(data.value.joke)
+          m.edit(data.value.joke.replace(/&quot;/g, '\''))
         })
         .catch((err) => {
           console.log('error retrieving chucks facts: ', err)
