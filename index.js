@@ -2,6 +2,7 @@ const Discord = require("discord.js")
 const client = new Discord.Client()
 const MessageHandler = require("./message-handler.js")
 const handler = new MessageHandler()
+const config = require('./config.js')
 
 client.on('ready', () => {
   console.log("Bot ready!")
@@ -18,6 +19,6 @@ client.on('message', msg => {
   }
 })
 
-client.login('your token').then(str => {
+client.login(config.token).then(str => {
   client.user.setGame("Free Play! Use a!slot [amount]")
 })
